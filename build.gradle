@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.5
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile (
+    	'commons-collections:commons-collections:3.2'
+        , 'org.projectlombok:lombok:1.16.6'
+        , 'com.google.guava:guava:18.0'
+        , 'org.apache.commons:commons-lang3:3.2'
+        , 'com.fasterxml.jackson.core:jackson-core:2.6.3'
+        , 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
+        , 'com.fasterxml.jackson.core:jackson-annotations:2.6.3'
+    )
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
