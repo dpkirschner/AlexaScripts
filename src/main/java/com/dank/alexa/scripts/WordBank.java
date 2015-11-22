@@ -1,4 +1,4 @@
-package com.dank.alexa.scripts.phrase;
+package com.dank.alexa.scripts;
 
 import java.util.Set;
 
