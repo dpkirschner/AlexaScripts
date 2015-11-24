@@ -17,13 +17,11 @@ public class Nouns {
 	 */
 	public static Set<String> from(WordBank wb) {
 		Set<String> nounPhrases = new HashSet<String>();
-		
-		nounPhrases.addAll(wb.getNouns());
+
 		nounPhrases.addAll(generateArticleNounPhrases(wb));
 		
 		Set<String> adjectiveNounPhrases = generatedAdjectiveNounPhrases(wb);
-		
-		nounPhrases.addAll(adjectiveNounPhrases);
+
 		nounPhrases.addAll(generateArticleAdjectiveNounPhrases(wb, adjectiveNounPhrases));
 		
 		return nounPhrases;
