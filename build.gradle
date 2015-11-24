@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 version = '1.0'
 jar {
     manifest {
@@ -23,6 +23,12 @@ dependencies {
         , 'com.fasterxml.jackson.core:jackson-core:2.6.3'
         , 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
         , 'com.fasterxml.jackson.core:jackson-annotations:2.6.3'
+    )
+    testCompile (
+    	'junit:junit:4.+'
+    	, 'org.powermock:powermock-module-junit4:1.6.3'
+    	, 'org.powermock:powermock-api-easymock:1.6.3'
+    	, 'org.easymock:easymock:3.4'
     )
 }
 

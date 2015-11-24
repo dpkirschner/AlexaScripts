@@ -17,6 +17,7 @@ public class GenerateUtterances {
 		Set<String> utterances = GenerateUtterances.from(wb);
 		utterances.stream().sorted().forEach(System.out::println);
 	}
+	
 	public static Set<String> from(WordBank wb) {
 		Set<String> nounPhrases = Nouns.from(wb);
 		
