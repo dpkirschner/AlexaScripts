@@ -43,3 +43,5 @@ uploadArchives {
        }
     }
 }
+
+build.dependsOn test
