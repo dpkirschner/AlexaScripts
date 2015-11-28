@@ -3,6 +3,8 @@ package com.dank.alexa.scripts.phrases;
 import java.util.HashSet;
 import java.util.Set;
 
+import lombok.NonNull;
+
 import com.dank.alexa.scripts.WordBank;
 
 public class ImperativeCommands {
@@ -14,7 +16,7 @@ public class ImperativeCommands {
 	 * @param nounPhrases the noun phrases to turn into questions
 	 * @return the generated imperative commands
 	 */
-	public static Set<String> from(WordBank wb, Set<String> nounPhrases) {
+	public static Set<String> from(@NonNull WordBank wb, @NonNull Set<String> nounPhrases) {
 		//generate command with transitive verb (only needs noun phrase EG: 'say {noun phrase}')
 		//generate command with ditransitive verb (needs noun phrase and indirect object EG: 'tell {indirect object} {noun phrase}')
 		

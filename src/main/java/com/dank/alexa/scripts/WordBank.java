@@ -4,8 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -13,12 +16,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableSet;
 
 @Data
+@NoArgsConstructor //required for the JSON mapping to work correctly
+@AllArgsConstructor
 @Builder
 public class WordBank {
 	private static String PREFIX = "src/main/resources/";
-	
+	@NonNull
 	private Set<String> nouns;
+	@NonNull
 	private Set<String> verbs;
+	@NonNull
 	private Set<String> adjectives;
 	
 	/**

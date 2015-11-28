@@ -3,19 +3,21 @@ package com.dank.alexa.scripts.phrases;
 import java.util.HashSet;
 import java.util.Set;
 
+import lombok.NonNull;
+
 import com.dank.alexa.scripts.WordBank;
 import com.google.common.collect.ImmutableSet;
 
 public class Nouns {
-	private static String SPACE = " ";
-	private static Set<String> articles = ImmutableSet.of("a", "an", "the");
+	public static String SPACE = " ";
+	public static Set<String> articles = ImmutableSet.of("a", "an", "the");
 	
 	/**
 	 * Generates and store the various noun phrases using a combination of the noun and adjective fields
 	 * @param wb the {@link WordBank} containing the parsed input words
 	 * @return the generated noun phrases
 	 */
-	public static Set<String> from(WordBank wb) {
+	public static Set<String> from(@NonNull WordBank wb) {
 		Set<String> nounPhrases = new HashSet<String>();
 
 		nounPhrases.addAll(generateArticleNounPhrases(wb));

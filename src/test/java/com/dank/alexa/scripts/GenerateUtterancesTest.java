@@ -20,6 +20,7 @@ import com.dank.alexa.scripts.phrases.Nouns;
 import com.dank.alexa.scripts.phrases.Questions;
 import com.google.common.collect.ImmutableSet;
 
+
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Nouns.class, Questions.class, ImperativeCommands.class})
 public class GenerateUtterancesTest {

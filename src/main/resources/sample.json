@@ -1,4 +1,5 @@
 {
+	"articles": ["a", "an", "the"],
 	"nouns": ["idea", "thought"],
 	"verbs": ["say", "do", "tell me"],
 	"adjectives": ["new", "random", "interesting", "crazy", "cool"]
